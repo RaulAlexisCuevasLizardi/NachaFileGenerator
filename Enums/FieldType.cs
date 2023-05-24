@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NachaFileGenerator.Enums
+﻿namespace NachaFileGenerator.Enums
 {
     //consider adding "concrete" field type.
     //a concrete type would have a value that cannot be changed
@@ -15,6 +9,7 @@ namespace NachaFileGenerator.Enums
         Alphanumeric,
         RouteNumber,
         Date,
-        Time
+        Time,
+        RouteNumberNoChkDigit
     }
 }
