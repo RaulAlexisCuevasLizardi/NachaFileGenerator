@@ -5,7 +5,7 @@ namespace NachaFileGenerator.Interfaces.Fields
     class BatchHeaderFieldDefinition : FieldDefinition, IFieldDefinition
     {
         private readonly BatchHeaderField FieldNumber;
-        public BatchHeaderFieldDefinition(BatchHeaderField fieldNumber, int length, FieldType fieldType, bool required, int pos) : base(length, fieldType, required, pos)
+        public BatchHeaderFieldDefinition(BatchHeaderField fieldNumber, int length, FieldType fieldType, bool required, int pos, string defaultValue = null) : base(length, fieldType, required, pos, defaultValue)
         {
             this.FieldNumber = fieldNumber;
         }

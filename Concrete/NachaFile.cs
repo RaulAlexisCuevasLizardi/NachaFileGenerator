@@ -15,6 +15,7 @@ namespace NachaFileGenerator.Concrete
 
         public void AddRecord(INachaRecord nachaRecord)
         {
+            //TODO: validate batch records. batch number must be in ascending order.
             NachaRecords.Add(nachaRecord);
         }
     }

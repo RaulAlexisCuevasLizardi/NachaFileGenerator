@@ -14,10 +14,10 @@ namespace NachaFileGenerator.Concrete
         {
             BatchHeaderRecordStrBuilder = new StringBuilder();
             FieldDefinitions = new BatchHeaderFieldDefinition[]{
-                new BatchHeaderFieldDefinition(BatchHeaderField.RecordTypeCode,               1,   FieldType.Numeric,                  true,  1),
+                new BatchHeaderFieldDefinition(BatchHeaderField.RecordTypeCode,               1,   FieldType.Numeric,                  true,  1, "5"),
                 new BatchHeaderFieldDefinition(BatchHeaderField.ServiceClassCode,             3,   FieldType.Numeric,                  true,  2),
                 new BatchHeaderFieldDefinition(BatchHeaderField.CompanyName,                  16,  FieldType.Alphanumeric,             true,  5),
-                new BatchHeaderFieldDefinition(BatchHeaderField.CompanyDiscretionaryDate,     20,  FieldType.Alphanumeric,             false, 21),
+                new BatchHeaderFieldDefinition(BatchHeaderField.CompanyDiscretionaryData,     20,  FieldType.Alphanumeric,             false, 21),
                 new BatchHeaderFieldDefinition(BatchHeaderField.CompanyIdentification,        10,  FieldType.Alphanumeric,             true,  41),
                 new BatchHeaderFieldDefinition(BatchHeaderField.StandardEntryClassCode,        3,  FieldType.Alphanumeric,             true,  51),
                 new BatchHeaderFieldDefinition(BatchHeaderField.CompanyEntryDescription,      10,  FieldType.Alphanumeric,             true,  54),

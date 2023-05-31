@@ -7,9 +7,10 @@
         Numeric,
         Alphabetic,
         Alphanumeric,
-        RouteNumber,
-        Date,
-        Time,
-        RouteNumberNoChkDigit
+        RouteNumber, //a nine digit string that starts with an alphabetical character
+        Date, //YYMMDD
+        Time, //HHMM
+        RouteNumberNoChkDigit, //TTTTAAAA, route number without the first character
+        Constant //Cannot be changed, must have default value
     }
 }

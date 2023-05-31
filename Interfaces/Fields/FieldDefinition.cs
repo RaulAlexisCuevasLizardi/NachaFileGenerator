@@ -8,12 +8,14 @@ namespace NachaFileGenerator.Interfaces.Fields
         private readonly FieldType FieldType;
         private readonly bool Required;
         private readonly int Pos;
-        public FieldDefinition(int length, FieldType fieldType, bool required, int pos)
+        private readonly string defaultValue;
+        public FieldDefinition(int length, FieldType fieldType, bool required, int pos, string defaultValue = null)
         {
             this.Length = length;
             this.FieldType = fieldType;
             this.Required = required;
             this.Pos = pos;
+            this.defaultValue = defaultValue;
         }
 
         public int GetLength()
@@ -34,6 +36,10 @@ namespace NachaFileGenerator.Interfaces.Fields
         public int GetPos()
         {
             return this.Pos;
+        }
+        public string GetDefaultValue()
+        {
+            return this.defaultValue;
         }
     }
 }

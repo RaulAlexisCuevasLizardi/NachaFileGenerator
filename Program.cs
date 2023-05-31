@@ -26,6 +26,22 @@ namespace NachaFileGenerator
             fileHeaderRecord.AddField(FileHeaderField.ReferenceCode, "ExtraInf");
             Console.WriteLine("[" + fileHeaderRecord.GetRecord() + "]");
             nachaFileGenerator.AddRecord(fileHeaderRecord);
+            IBatchHeaderRecord batchHeaderRecord = new BatchHeaderRecord();
+            batchHeaderRecord.AddField(BatchHeaderField.RecordTypeCode, "5");
+            batchHeaderRecord.AddField(BatchHeaderField.ServiceClassCode, "123");
+            batchHeaderRecord.AddField(BatchHeaderField.CompanyName, "RaulCompany");
+            batchHeaderRecord.AddField(BatchHeaderField.CompanyDiscretionaryData, "IDKWHAT");
+            batchHeaderRecord.AddField(BatchHeaderField.CompanyIdentification, "RAUL");
+            batchHeaderRecord.AddField(BatchHeaderField.StandardEntryClassCode, "BOC"); //TODO: create SEC codes https://dev-ach-guide.pantheonsite.io/ach-file-details#pageContent-1
+            batchHeaderRecord.AddField(BatchHeaderField.CompanyEntryDescription, "Origin");
+            batchHeaderRecord.AddField(BatchHeaderField.CompanyDescriptiveDate, "233105");
+            batchHeaderRecord.AddField(BatchHeaderField.EffectiveEntryDate, "230531");
+            batchHeaderRecord.AddField(BatchHeaderField.SettlementDate, "321");
+            batchHeaderRecord.AddField(BatchHeaderField.OriginatorStatusCode, "1");
+            batchHeaderRecord.AddField(BatchHeaderField.OriginatingDfiIdentification, "12345678");
+            batchHeaderRecord.AddField(BatchHeaderField.BatchNumber, "1");
+            Console.WriteLine("[" + batchHeaderRecord.GetRecord() + "]");
+            nachaFileGenerator.AddRecord(batchHeaderRecord);
         }
     }
 }

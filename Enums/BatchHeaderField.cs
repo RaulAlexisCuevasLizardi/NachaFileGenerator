@@ -5,7 +5,7 @@
         RecordTypeCode,
         ServiceClassCode,
         CompanyName,
-        CompanyDiscretionaryDate,
+        CompanyDiscretionaryData,
         CompanyIdentification,
         StandardEntryClassCode,
         CompanyEntryDescription,

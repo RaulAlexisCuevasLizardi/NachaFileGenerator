@@ -10,5 +10,6 @@ namespace NachaFileGenerator.Interfaces
         int GetPos();
         int GetFieldNumber();
         string GetFieldName();
+        string GetDefaultValue();
     }
 }

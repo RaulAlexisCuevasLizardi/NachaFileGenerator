@@ -5,7 +5,7 @@ namespace NachaFileGenerator.Interfaces.Fields
     class FileHeaderFieldDefinition : FieldDefinition, IFieldDefinition
     {
         private readonly FileHeaderField FieldNumber;
-        public FileHeaderFieldDefinition(FileHeaderField fieldNumber, int length, FieldType fieldType, bool required, int pos): base(length, fieldType, required, pos)
+        public FileHeaderFieldDefinition(FileHeaderField fieldNumber, int length, FieldType fieldType, bool required, int pos, string defaultValue = null): base(length, fieldType, required, pos, defaultValue)
         {
             this.FieldNumber = fieldNumber;
         }
